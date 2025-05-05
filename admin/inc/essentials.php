@@ -20,9 +20,9 @@
 
 // sendgrid api key
 
-  define('SENDGRID_API_KEY', "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");
-  define('SENDGRID_EMAIL', "benjamin@mossu.ch"); // Remplace par ton email expéditeur.
-  define('SENDGRID_NAME', "stonk.ch"); // Remplace par le nom de ton site ou organisation.
+define('SENDGRID_API_KEY', getenv('SENDGRID_API_KEY') ?: $_ENV['SENDGRID_API_KEY'] ?? '');
+define('SENDGRID_EMAIL', getenv('SENDGRID_EMAIL') ?: $_ENV['SENDGRID_EMAIL'] ?? '');
+define('SENDGRID_NAME', getenv('SENDGRID_NAME') ?: $_ENV['SENDGRID_NAME'] ?? '');
 
   // Possible "booking status" values in db = pending, booked, payment failed, cancelled
   
